@@ -1,75 +1,59 @@
 package py.edu.facitec.l3.model;
-
-import java.util.Date;
-
+/*
+ * 
+ * @author franciscoLopez
+ * 
+ * */
 public class Producto {
-	
+	//Inicializar los atributos
 	private int codigo;
-	private String descripcion;
-	private int stock;
+	private String decripcion;
 	private int precio;
-	private Date fecha_registro;
+	private int stock;
 	
-	
-	public Producto() {
+	public Producto() {//ConstructorPor Defecto
 		super();
 		this.codigo=0;
-		this.descripcion="";
-		this.stock=0;
+		this.decripcion="";
 		this.precio=0;
-		this.fecha_registro= new Date();
+		this.stock=0;
 	}
-	
-	public Producto(int codigo, String descripcion, int stock, int precio, Date fecha_registro) {
+    //ConstructorPorParametros
+	public Producto(int codigo, String decripcion, int precio, int stock) {
 		super();
 		this.codigo = codigo;
-		this.descripcion = descripcion;
-		this.stock = stock;
+		this.decripcion = decripcion;
 		this.precio = precio;
-		this.fecha_registro = fecha_registro;
+		this.stock = stock;
 	}
-
 	public int getCodigo() {
 		return codigo;
 	}
-
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
-
-	public String getDescripcion() {
-		return descripcion;
+	public String getDecripcion() {
+		return decripcion;
 	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setDecripcion(String decripcion) {
+		this.decripcion = decripcion;
 	}
-
-	public int getStock() {
-		return stock;
-	}
-
-	public void setStock(int stock) {
-		this.stock = stock;
-	}
-
 	public int getPrecio() {
 		return precio;
 	}
-
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
-
-	public Date getFecha_registro() {
-		return fecha_registro;
+	public int getStock() {
+		return stock;
 	}
-
-	public void setFecha_registro(Date fecha_registro) {
-		this.fecha_registro = fecha_registro;
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
-    
-
+	@Override
+	public String toString() {
+		return "Producto [codigo=" + codigo + ", decripcion=" + decripcion + ", precio=" + precio + ", stock=" + stock
+				+ "]";
+	}
 	
-
 }
